@@ -11,22 +11,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center"
         android:padding="16dp">
-        <ImageView
-            android:id="@+id/moviePoster"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:contentDescription="@string/poster"
-            android:scaleType="fitXY"
-            android:src="@drawable/poster"/>
-        <TextView
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizontalRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_layout" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/movie_description"
-            android:textSize="18sp"
             android:gravity="center"
-            android:textStyle="bold|italic"/>
+            android:text="@string/movie_description"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
 
     </LinearLayout>
 

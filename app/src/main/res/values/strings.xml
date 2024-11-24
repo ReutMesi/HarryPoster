@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">HarryPoster</string>
     <string name="poster">poster</string>
-    <string name="movie_description">The magical journey begins!\nJoin Harry Potter, an ordinary boy turned wizard, as he embarks on his first year at Hogwarts School of Witchcraft and Wizardry.\nAlongside his friends Hermione Granger and Ron Weasley, Harry discovers the hidden dangers of a powerful artifact—the Philosopher\'s Stone. With dark forces looming, will Harry uncover the truth before it’s too late?\nA world of magic, mystery, and adventure awaits.\n\nThe magic is real.\nThe adventure is unforgettable.</string>
+    <string name="movie_description">The magical journey begins!\nJoin Harry Potter, an ordinary boy turned wizard,\n as he embarks on his first year at Hogwarts School of Witchcraft and Wizardry.\nAlongside his friends Hermione Granger and Ron Weasley,\n Harry discovers the hidden dangers of a powerful artifact—the Philosopher\'s Stone. \nWith dark forces looming, will Harry uncover the truth before it’s too late?\nA world of magic, mystery, and adventure awaits.\n\nThe magic is real.\nThe adventure is unforgettable.</string>
 </resources>
