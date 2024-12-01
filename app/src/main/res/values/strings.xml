@@ -2,4 +2,17 @@
     <string name="app_name">HarryPoster</string>
     <string name="poster">poster</string>
     <string name="movie_description">The magical journey begins!\nJoin Harry Potter, an ordinary boy turned wizard,\n as he embarks on his first year at Hogwarts School of Witchcraft and Wizardry.\nAlongside his friends Hermione Granger and Ron Weasley,\n Harry discovers the hidden dangers of a powerful artifact—the Philosopher\'s Stone. \nWith dark forces looming, will Harry uncover the truth before it’s too late?\nA world of magic, mystery, and adventure awaits.\n\nThe magic is real.\nThe adventure is unforgettable.</string>
+    <string name="select_age_group">Select Age Group:</string>
+    <string name="terms_and_conditions">
+    Terms and Conditions:\n
+
+    1. Use of the app is subject to acceptance of these terms.\n
+    2. The app is provided "as is" without warranty of any kind.\n
+    3. Users are responsible for the accuracy of the data they provide.\n
+    4. Unauthorized use or reproduction of the app is prohibited.\n
+    5. The app may collect data as described in the privacy policy.\n
+
+    By using this app, you agree to abide by these terms and conditions.
+    </string>
+
 </resources>
