@@ -10,8 +10,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:background="@drawable/back"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <!-- Image Slider -->
@@ -20,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layoutDirection="ltr"
             android:orientation="horizontal"
             android:padding="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -34,7 +36,8 @@
             android:gravity="center"
             android:text="@string/movie_description"
             android:textSize="15sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold|italic"
+            android:textColor="@color/light_yellow"/>
 
         <!-- Date and Location Selection -->
         <LinearLayout
@@ -45,23 +48,29 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/date_dialog_btn"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="When?"
-                app:icon="@drawable/date" />
+                android:text="@string/when"
+                android:textColor="@color/red_gryffindor"
+                app:icon="@drawable/date"
+                android:textStyle="bold"
+                app:iconTint="@color/red_gryffindor" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonLocation"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center_vertical"
                 android:layout_weight="1"
                 android:gravity="center|center_horizontal"
-                android:text="Where?"
+                android:text="@string/where"
+                android:textStyle="bold"
                 app:icon="@drawable/location"
-                app:iconGravity="start" />
+                app:iconGravity="start"
+                android:textColor="@color/red_gryffindor"
+                app:iconTint="@color/red_gryffindor" />
         </LinearLayout>
 
         <!-- User Details Input -->
@@ -74,25 +83,40 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/red_gryffindor"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/dark_red_gryffindor"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextColor="@color/dark_red_gryffindor">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your name" />
+                    android:hint="@string/enter_your_name"
+                    android:textColor="@color/red_gryffindor" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Second Input: Phone -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/dark_red_gryffindor"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextColor="@color/dark_red_gryffindor"
+                android:textColor="@color/dark_red_gryffindor"
+                android:textColorHint="@color/red_gryffindor"
+                android:backgroundTint="@color/dark_red_gryffindor">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextPhone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Enter your phone nymber" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_phone_number"
+                android:textColor="@color/red_gryffindor" />
+        </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <!-- Ticket Selection -->
@@ -102,42 +126,54 @@
             android:layout_marginBottom="8dp"
             android:gravity="start"
             android:padding="10dp"
-            android:text="Please Select Tickets"
+            android:text="@string/please_select_tickets"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/light_yellow"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Child 10$ :"
+                android:text="@string/child_10"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/light_yellow"/>
+
             <NumberPicker
                 android:id="@+id/childTicketsPicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical" />
+                android:layout_gravity="center_vertical"
+                android:solidColor="@color/dark_red_gryffindor"
+                android:background="@color/yellow_hufflepuff"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="8dp"
                 android:paddingStart="10dp"
-                android:text="Adult 20$ :"
+                android:text="@string/adult_20"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/light_yellow"/>
+
             <NumberPicker
                 android:id="@+id/adultTicketsPicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:scrollbarSize="2dp" />
+                android:scrollbarSize="2dp"
+                android:solidColor="@color/dark_red_gryffindor"
+                android:background="@color/yellow_hufflepuff"/>
         </LinearLayout>
 
         <!-- Display Total Price -->
@@ -146,54 +182,67 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Total: $0"
+            android:text="@string/total_0"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/red_gryffindor"/>
+        <TextView
+            android:id="@+id/totalPriceTextViewNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/total_number"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/red_gryffindor"/>
 
         <!-- Terms and Conditions -->
         <Button
             android:id="@+id/termsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_gravity="center"
-            android:text="Terms and Conditions"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@android:color/transparent"
-            android:textColor="#3F51B5"
-            android:textStyle="bold"
-            android:padding="8dp"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"
+            android:padding="8dp"
+            android:text="@string/terms"
+            android:textColor="@color/blue_ravenclaw"
+            android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/termsCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I agree to the terms and conditions"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:text="@string/i_agree"
+            android:textColor="@color/blue_ravenclaw" />
 
         <!-- Get Tickets and Confirm Purchase -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/getTicketsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Get Tickets"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/blue_ravenclaw"
+                android:text="@string/get_tickets" />
 
             <Button
                 android:id="@+id/confirmPurchaseButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirm Purchase"
-                android:visibility="gone" /> <!-- Initially hidden -->
+                android:text="@string/confirm_purchase"
+                android:visibility="gone"
+                android:background="@color/green_slytherin"
+                android:backgroundTint="@color/dark_red_gryffindor"/> <!-- Initially hidden -->
         </LinearLayout>
-
     </LinearLayout>
 
 </ScrollView>

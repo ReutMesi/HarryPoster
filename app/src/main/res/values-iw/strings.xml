@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HarryPoster</string>
+    <string name="poster">פוסטר</string>
+    <string name="movie_description">המסע הקסום מתחיל! הצטרפו להארי פוטר, ילד רגיל שהפך לקוסם, כשהוא מתחיל את השנה הראשונה שלו בבית הספר להוגוורטס לקוסמים וקסמים. יחד עם חבריו הרמיוני גריינג\'ר ורון ויזלי, הארי מגלה את הסכנות המוסתרות של אובייקט קסום – אבן החכמים. כאשר כוחות אפלים מאיימים, האם הארי יחשוף את האמת לפני שיהיה מאוחר מדי? עולם של קסם, מסתורין והרפתקה מחכה. הקסם אמיתי. ההרפתקה בלתי נשכחת.</string>
+    <string name="terms_and_conditions">תנאים והגבלות:  השימוש באפליקציה מותנה בהסכמה לתנאים אלו. האפליקציה מסופקת \"כפי שהיא\" ללא אחריות מכל סוג. המשתמשים אחראים לדיוק המידע שהם מספקים. השימוש או ההעתקה הלא מורשית של האפליקציה אסור. האפליקציה עשויה לאסוף נתונים כפי שמתואר במדיניות הפרטיות. על ידי השימוש באפליקציה, אתה מסכים לפעול בהתאם לתנאים וההגבלות הללו.</string>
+    <string name="when">מתי?</string>
+    <string name="where">איפה?</string>
+    <string name="enter_your_phone_number">הכנס מספר טלפון</string>
+    <string name="enter_your_name">הכנס את שמך</string>
+    <string name="please_select_tickets">בבקשה בחר כרטיסים</string>
+    <string name="child_10">ילד  35₪:</string>
+    <string name="adult_20">מבוגר  47₪:</string>
+    <string name="total_0">"סך הכל :  "</string>
+    <string name="terms">תנאים והגבלות</string>
+    <string name="i_agree">אני מסכימה עם התנאים וההגבלות של האתר</string>
+    <string name="get_tickets">קניית כרטיסים</string>
+    <string name="confirm_purchase">אישור הזמנה</string>
+    <string name="yes_planet_jerusalem">יאס פלאנט ירושלים</string>
+    <string name="cinema_city_tel_aviv">סינמה סיטי תל אביב</string>
+    <string name="rav_hen_dizengoff">רב-חן דיזינגוף</string>
+    <string name="globus_max_be_er_sheva">גלובוס מקס באר שבע</string>
+    <string name="yes_planet_haifa">"יאס פלאנט חיפה "</string>
+    <string name="select_location">בחר מיקום</string>
+    <string name="please_select_a_location">בבקשה בחר מיקום</string>
+    <string name="please_select_a_date">בבקשה בחר תאריך</string>
+    <string name="please_agree_to_the_terms_and_conditions">בבקשה לאשר תנאים והגבלות</string>
+    <string name="please_enter_a_valid_10_digit_phone_number">יש להכניס מספר טלפון תקין</string>
+    <string name="please_enter_your_name">בבקשה הכנס שם</string>
+    <string name="please_select_at_least_one_ticket">בבקשה בחר לפחות כרטיס אחד</string>
+    <string name="your_order_summary">סיכום ההזמנה</string>
+    <string name="confirm">בצע הזמנה</string>
+    <string name="your_order_has_been_placed_successfully">ההזמנה הושלמה בהצלחה!</string>
+    <string name="cancel">ביטול</string>
+    <string name="ok">אישור</string>
+    <string name="thank_you_for_agreeing_to_the_terms">תודה שהסכמת לקבל את התנאים</string>
+    <string name="accept">אישור</string>
+</resources>
