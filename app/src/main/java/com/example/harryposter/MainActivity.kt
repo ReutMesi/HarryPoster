@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val termsCheckBox = findViewById<CheckBox>(R.id.termsCheckBox)
-        //val textView : TextView = findViewById(R.id.TextViewDescribe)
         val recyclerView = findViewById<RecyclerView>(R.id.horizontalRecyclerView)
         val dateBtn = findViewById<MaterialButton>(R.id.date_dialog_btn)
         val locationBtn = findViewById<MaterialButton>(R.id.buttonLocation)
@@ -38,8 +37,6 @@ class MainActivity : AppCompatActivity() {
         val termsButton = findViewById<Button>(R.id.termsButton)
 
 
-
-        // Initialize RecyclerView with images
         val images = listOf(
             R.drawable.poster, R.drawable.img1, R.drawable.img2,
             R.drawable.img3, R.drawable.img4, R.drawable.img5,
@@ -48,13 +45,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = PictureAdapter(images)
 
-        // Start auto-scroll for RecyclerView
         startAutoScroll(recyclerView, images.size)
 
-        // Set up ticket pickers
         setupTicketPickers(childTicketsPicker, adultTicketsPicker, totalPriceTextView)
 
-        // Handle terms checkbox
         termsCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 Toast.makeText(this,
@@ -62,13 +56,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Date Picker
         setupDatePicker(dateBtn)
 
-        // Location Selection Dialog
         setupLocationPicker(locationBtn)
 
-        // Handle order submission
         getTicketsButton.setOnClickListener {
             handleOrderSubmission(
                 childTicketsPicker, adultTicketsPicker, dateBtn.text.toString(),
@@ -76,7 +67,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        // Handle Terms button
         termsButton.setOnClickListener{
             val builder = AlertDialog.Builder(this)
             val dialogView = layoutInflater.inflate(R.layout.dialog_terms_conditions, null)
@@ -91,7 +81,6 @@ class MainActivity : AppCompatActivity() {
             dialog.show()
         }
 
-        // Handle edge-to-edge padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -181,7 +170,6 @@ class MainActivity : AppCompatActivity() {
         val userName = findViewById<TextInputEditText>(R.id.name).text.toString()
         val userPhone = findViewById<TextInputEditText>(R.id.editTextPhone).text.toString()
 
-        // Validate user inputs
         when {
             selectedLocation == getString(R.string.where)-> showToast(getString(R.string.please_select_a_location))
             selectedDate == getString(R.string.`when`) -> showToast(getString(R.string.please_select_a_date))
@@ -200,8 +188,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateTotalPrice(childTickets: Int, adultTickets: Int): Int {
-        val childPrice = 35 // Price per child ticket
-        val adultPrice = 47 // Price per adult ticket
+        val childPrice = 35
+        val adultPrice = 47
         return (childTickets * childPrice) + (adultTickets * adultPrice)
     }
 
@@ -211,22 +199,20 @@ class MainActivity : AppCompatActivity() {
         childTickets: Int, adultTickets: Int, totalPrice: Int
     ) {
         val orderSummary = """
-        Name: $userName
-        Phone: $userPhone
-        Date: $selectedDate
-        Location: $selectedLocation
-        Child Tickets: $childTickets
-        Adult Tickets: $adultTickets
-        Total: ₪$totalPrice
-    """.trimIndent()
+            ${getString(R.string.name)}: $userName
+            ${getString(R.string.phone)}: $userPhone
+            ${getString(R.string.date)}: $selectedDate
+            ${getString(R.string.location)}: $selectedLocation
+            ${getString(R.string.child_tickets)}: $childTickets
+            ${getString(R.string.adult_tickets)}: $adultTickets
+            ${getString(R.string.total)}: ${getString(R.string.currency_symbol)}$totalPrice
+        """.trimIndent()
 
-        // Inflate the custom dialog layout
+
         val dialogView = layoutInflater.inflate(R.layout.summary_layout, null)
 
-        // Set the order summary text
         dialogView.findViewById<TextView>(R.id.summary_content).text = orderSummary
 
-        // Create the dialog
         val builder = AlertDialog.Builder(this)
             .setView(dialogView)
 
@@ -235,21 +221,18 @@ class MainActivity : AppCompatActivity() {
         val animation = AnimationUtils.loadAnimation(this, R.anim.move)
         animatedImage.startAnimation(animation)
 
-
-        // Set up button listeners
         dialogView.findViewById<Button>(R.id.acceptButton).setOnClickListener {
-            // Handle purchase confirmation
             val confirmationMessage = getString(R.string.your_order_has_been_placed_successfully)
             Toast.makeText(this, confirmationMessage, Toast.LENGTH_SHORT).show()
-            clearFields() // Clear fields if needed
+            clearFields()
             dialog.dismiss()
         }
 
         dialogView.findViewById<Button>(R.id.cancelButton).setOnClickListener {
-            dialog.dismiss() // Close the dialog on cancel
+            dialog.dismiss()
         }
 
-        dialog.show() // Show the dialog
+        dialog.show()
     }
 
 

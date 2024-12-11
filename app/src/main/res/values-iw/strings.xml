@@ -35,4 +35,11 @@
     <string name="ok">אישור</string>
     <string name="thank_you_for_agreeing_to_the_terms">תודה שהסכמת לקבל את התנאים</string>
     <string name="accept">אישור</string>
+    <string name="name">שם</string>
+    <string name="phone">טלפון</string>
+    <string name="date">תאריך</string>
+    <string name="location">מיקום</string>
+    <string name="child_tickets">כרטיסים ילדים</string>
+    <string name="adult_tickets">כרטיסים מבוגרים</string>
+    <string name="total">סה״כ</string>
 </resources>

@@ -45,5 +45,13 @@
     <string name="thank_you_for_agreeing_to_the_terms">Thank you for agreeing to the terms!</string>
     <string name="accept">Accept</string>
     <string name="total_number" translatable="false">"0₪ "</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="date">Date</string>
+    <string name="location">Location</string>
+    <string name="child_tickets">Child Tickets</string>
+    <string name="adult_tickets">Adult Tickets</string>
+    <string name="total">Total</string>
+    <string name="currency_symbol" translatable="false">₪</string>
 
 </resources>
